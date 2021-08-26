@@ -8,105 +8,120 @@ export default function Main() {
             car: 'fox volswagen',
             year: '2019',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'2',
             car: 'sandero gt line',
             year: '2021',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'3',
             car: 'amarok volswagen',
             year: '2018',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'4',
             car: 'fox volswagen',
             year: '2019',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'5',
             car: 'sandero gt line',
             year: '2021',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'6',
             car: 'amarok volswagen',
             year: '2018',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'7',
             car: 'fox volswagen',
             year: '2019',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'8',
             car: 'sandero gt line',
             year: '2021',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'9',
             car: 'amarok volswagen',
             year: '2018',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'10',
             car: 'fox volswagen',
             year: '2019',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'11',
             car: 'sandero gt line',
             year: '2021',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'12',
             car: 'amarok volswagen',
             year: '2018',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'13',
             car: 'fox volswagen',
             year: '2019',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'14',
             car: 'sandero gt line',
             year: '2021',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
         {
             id:'15',
             car: 'amarok volswagen',
             year: '2018',
             owner: 'matias',
-            price: '200000'
+            price: '200000',
+            description: 'El Volkswagen Fox fue originalmente un automóvil de turismo con carrocerías sedán dos y cuatro puertas, así como una rural de dos puertas basado en el Volkswagen Gol/Voyage para el mercado de América del Norte entre 1987-1999. Contaba con un motor delantero longitudinal con tracción delantera.'
         },
     ]
 
