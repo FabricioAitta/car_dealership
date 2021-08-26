@@ -4,7 +4,7 @@ import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons"; // impor
 export default function Footer({executeScroll}) {
 
     return (
-        <div className="container max-w-full h-12 flex items-center bg-black text-white">   
+        <div className="container max-w-full h-12 flex items-center bg-black text-white bottom-0 fixed">   
             <ul className="container flex flex-row flex-wrap justify-around">
                 <li>Desarrollado por @</li>
                 <li>NORT MOTORS AUTOMOVILES</li>
