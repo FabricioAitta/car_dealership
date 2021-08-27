@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { useRef, useEffect, useState } from 'react'
 import Loader from '../components/utils/loader';
-import { ENDPOINT } from './utils';
+import { ENDPOINT } from '../utils';
 import Header from '../components/header';
 import Homepage from '../components/homepage';
 import Main from '../components/main';
