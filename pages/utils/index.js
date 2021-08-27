@@ -1,0 +1,1 @@
+export const ENDPOINT = 'https://nameless-stream-26020.herokuapp.com/api'

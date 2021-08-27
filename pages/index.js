@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React, { useRef, useEffect, useState } from 'react'
 import Loader from '../components/utils/loader';
+import { ENDPOINT } from './utils';
 import Header from '../components/header';
 import Homepage from '../components/homepage';
 import Main from '../components/main';
@@ -9,7 +10,7 @@ import Footer from '../components/footer';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) //Ref ScrollTop
 
-export default function Home() {
+export default function Home({cars}) {
 
   const myRef = useRef(null) //ScrollTop
   const executeScroll = () => scrollToRef(myRef) //ScrollTop
@@ -36,10 +37,21 @@ export default function Home() {
       <>
       <Header myRef={myRef}/>
       <Homepage />
-      <Main />
+      <Main cars={cars}/>
       <Footer executeScroll={executeScroll} />
       </>
       }
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${ENDPOINT}/cars`)
+  const cars = await res.json()
+
+  return {
+    props: {
+      cars,
+    },
+  }
 }

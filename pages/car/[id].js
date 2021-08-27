@@ -39,8 +39,8 @@ export default function Car() {
             :
             <>
             <Header myRef={myRef}/>
-            <div className="flex flex-row justify-center pt-24 h-full">
-                <CarouselCar />
+            <div className="container flex flex-row justify-center pt-24 mb-12 pl-5 h-full">
+                <CarouselCar dataCar={dataCar}/>
                 <DataCar dataCar={dataCar}/> 
             </div>
             <Footer executeScroll={executeScroll} />
