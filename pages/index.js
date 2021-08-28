@@ -10,7 +10,7 @@ import Footer from '../components/footer';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) //Ref ScrollTop
 
-export default function Home({cars}) {
+export default function Home({ cars, brand}) {
 
   const myRef = useRef(null) //ScrollTop
   const executeScroll = () => scrollToRef(myRef) //ScrollTop
@@ -35,7 +35,7 @@ export default function Home({cars}) {
       <Loader />
       :
       <>
-      <Header myRef={myRef}/>
+      <Header myRef={myRef} brand={brand}/>
       <Homepage />
       <Main cars={cars}/>
       <Footer executeScroll={executeScroll} />
@@ -49,9 +49,14 @@ export async function getStaticProps() {
   const res = await fetch(`${ENDPOINT}/cars`)
   const cars = await res.json()
 
+  const brand_res = await fetch(`${ENDPOINT}/brand`)
+  console.log(brand_res)
+  const brand = await brand_res.json()
+
   return {
     props: {
       cars,
+      brand,
     },
   }
 }

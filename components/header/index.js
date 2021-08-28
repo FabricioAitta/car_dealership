@@ -8,7 +8,7 @@ import {
     faHouseUser,
 } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
-export default function Header({ myRef }) {
+export default function Header({ myRef, brand }) {
 
     const [visible, setVisible] = useState('hidden')
 
@@ -68,42 +68,19 @@ export default function Header({ myRef }) {
                 tabIndex="-1"
             >
                 <div className="py-1" role="none">
-                <a
-                    href="#"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
-                    role="menuitem"
-                    tabIndex="-1"
-                    id="menu-item-0"
-                >
-                    Renault
-                </a>
-                <a
-                    href="#"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
-                    role="menuitem"
-                    tabIndex="-1"
-                    id="menu-item-1"
-                >
-                    Volswagen
-                </a>
-                <a
-                    href="#"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
-                    role="menuitem"
-                    tabIndex="-1"
-                    id="menu-item-2"
-                >
-                    Fiat
-                </a>
-                <a
-                    href="#"
-                    className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
-                    role="menuitem"
-                    tabIndex="-1"
-                    id="menu-item-2"
-                >
-                    Audi
-                </a>
+                    {brand?.map(b => {
+                        return(
+                            <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
+                                role="menuitem"
+                                tabIndex="-1"
+                                id="menu-item-0"
+                            >
+                                {b.name.toUpperCase()}
+                            </a>
+                        )
+                    })}
                 </div>
             </div>
             </div>
