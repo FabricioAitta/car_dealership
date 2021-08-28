@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 export default function CarouselCar({dataCar}) {
 
     return (
-        <div className="flex flex-row justify-center w-1/2">
+        <div className="flex flex-row justify-center sm:w-1/2">
             <div className="max-w-full h-full flex justify-center">
             <Carousel
                 infiniteLoop

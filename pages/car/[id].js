@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {useRouter} from 'next/router';
 import Loader from '../../components/utils/loader';
 import { ENDPOINT } from '../../utils';
@@ -8,14 +8,9 @@ import CarouselCar from '../../components/carousel';
 import DataCar from '../../components/single-car';
 import Footer from '../../components/footer';
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) //Ref ScrollTop
-
 export default function Car({ brand }) {
 
     const router = useRouter()
-
-    const myRef = useRef(null) //ScrollTop
-    const executeScroll = () => scrollToRef(myRef) //ScrollTop
 
     const dataCar = {car: router.query}
 
@@ -39,12 +34,12 @@ export default function Car({ brand }) {
             <Loader />
             :
             <>
-            <Header myRef={myRef} brand={brand}/>
-            <div className="container flex flex-row justify-center pt-24 mb-12 pl-5 h-full">
+            <Header brand={brand}/>
+            <div className="container flex flex-row flex-wrap justify-center pt-24 mb-12 px-5 h-full">
                 <CarouselCar dataCar={dataCar}/>
                 <DataCar dataCar={dataCar}/> 
             </div>
-            <Footer executeScroll={executeScroll} />
+            <Footer />
             </>
             }
         </div>

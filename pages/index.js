@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Loader from '../components/utils/loader';
 import { ENDPOINT } from '../utils';
 import Header from '../components/header';
@@ -7,13 +7,7 @@ import Homepage from '../components/homepage';
 import Main from '../components/main';
 import Footer from '../components/footer';
 
-
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) //Ref ScrollTop
-
 export default function Home({ cars, brand}) {
-
-  const myRef = useRef(null) //ScrollTop
-  const executeScroll = () => scrollToRef(myRef) //ScrollTop
 
   const [loading, setLoading] = useState(true)
 
@@ -35,10 +29,10 @@ export default function Home({ cars, brand}) {
       <Loader />
       :
       <>
-      <Header myRef={myRef} brand={brand}/>
+      <Header brand={brand}/>
       <Homepage />
       <Main cars={cars}/>
-      <Footer executeScroll={executeScroll} />
+      <Footer />
       </>
       }
     </div>

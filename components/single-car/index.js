@@ -3,7 +3,7 @@ import React from 'react'
 export default function DataCar({dataCar}){
     
     return (
-        <div className="container box-border max-w-full flex flex-col justify-start items-center text-lg font-extralight w-1/2">
+        <div className="container box-border max-w-full flex flex-col justify-start items-center text-lg font-extralight sm:w-1/2">
             <div className="underline text-3xl font-semibold mb-24">DETALLES</div>
             <div>
                 <div className="w-full flex flex-row justify-center items-center">
