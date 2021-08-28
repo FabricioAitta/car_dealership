@@ -71,6 +71,7 @@ export default function Header({ myRef, brand }) {
                     {brand?.map(b => {
                         return(
                             <a
+                                key={b.name}
                                 href="#"
                                 className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
                                 role="menuitem"

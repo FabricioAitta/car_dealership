@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function Main({cars}) {
+export default function Main({ cars }) {
 
     return (
         <div className="container box-border max-w-full h-full flex flex-row flex-wrap justify-center items-center mb-12">   

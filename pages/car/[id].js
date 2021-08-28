@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { useRef, useEffect, useState } from 'react'
 import {useRouter} from 'next/router';
 import Loader from '../../components/utils/loader';
+import { ENDPOINT } from '../../utils';
 import Header from '../../components/header';
 import CarouselCar from '../../components/carousel';
 import DataCar from '../../components/single-car';
@@ -9,7 +10,7 @@ import Footer from '../../components/footer';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) //Ref ScrollTop
 
-export default function Car() {
+export default function Car({ brand }) {
 
     const router = useRouter()
 
@@ -38,7 +39,7 @@ export default function Car() {
             <Loader />
             :
             <>
-            <Header myRef={myRef}/>
+            <Header myRef={myRef} brand={brand}/>
             <div className="container flex flex-row justify-center pt-24 mb-12 pl-5 h-full">
                 <CarouselCar dataCar={dataCar}/>
                 <DataCar dataCar={dataCar}/> 
@@ -48,4 +49,19 @@ export default function Car() {
             }
         </div>
     )
+}
+
+export async function getServerSideProps() {
+    const res = await fetch(`${ENDPOINT}/cars`)
+    const car = await res.json()
+
+    const brand_res = await fetch(`${ENDPOINT}/brand`)
+    const brand = await brand_res.json()
+
+    return {
+        props: {
+            car,
+            brand,
+        },
+    }
 }

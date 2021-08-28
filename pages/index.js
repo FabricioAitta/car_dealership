@@ -45,12 +45,11 @@ export default function Home({ cars, brand}) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${ENDPOINT}/cars`)
   const cars = await res.json()
 
   const brand_res = await fetch(`${ENDPOINT}/brand`)
-  console.log(brand_res)
   const brand = await brand_res.json()
 
   return {
