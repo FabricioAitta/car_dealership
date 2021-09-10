@@ -7,7 +7,7 @@ export default function Header({ brand }) {
     const [visible, setVisible] = useState('hidden')
     const [isOpen, setIsOpen] = useState(false)
 
-    const handleClick = () => {
+    const handleClick = (e) => {
         if(visible == 'hidden') return setVisible('block')
         return setVisible('hidden')
     }
@@ -56,7 +56,7 @@ export default function Header({ brand }) {
                             id="menu-button"
                             aria-expanded="true"
                             aria-haspopup="true"
-                            onClick={() => handleClick()}
+                            onClick={(e) => handleClick(e)}
                             >
                             Unidades
                             <svg
@@ -85,17 +85,27 @@ export default function Header({ brand }) {
                             <div className="py-1" role="none">
                                 {brand?.map(b => {
                                     return(
-                                        <a
-                                            key={b.name}
-                                            href="#"
-                                            className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
-                                            role="menuitem"
-                                            tabIndex="-1"
-                                            id="menu-item-0"
-                                            onClick={() => handleClick()}
-                                        >
-                                            {b.name.toUpperCase()}
-                                        </a>
+                                        <div key={b.name}>
+                                        <Link
+                                                href={{
+                                                pathname: `/${b.name}`,
+                                                query: {b}
+                                                }}
+                                                >
+                                            <a
+                                                
+                                                href="#"
+                                                className="text-gray-700 block px-4 py-2 text-sm hover:text-red-500 hover:bg-gray-700"
+                                                role="menuitem"
+                                                tabIndex="-1"
+                                                id="menu-item-0"
+                                                name={b.name}
+                                                onClick={(e) => handleClick(e)}
+                                            >
+                                                    {b.name.toUpperCase()}
+                                            </a>
+                                        </Link>
+                                        </div>
                                     )
                                 })}
                             </div>
@@ -237,7 +247,7 @@ export default function Header({ brand }) {
                                             role="menuitem"
                                             tabIndex="-1"
                                             id="menu-item-0"
-                                            onClick={() => handleClick()}
+                                            onClick={() => handleClick(key)}
                                         >
                                             {b.name.toUpperCase()}
                                         </a>
