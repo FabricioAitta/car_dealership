@@ -123,7 +123,13 @@ export default function Header({ brand }) {
                         href="#"
                         className="text-gray-300 hover:bg-gray-700 hover:text-white hover:cursor-pointer px-3 py-2 rounded-md text-sm font-medium"
                     >
-                        Login
+                        <Link
+                        href={{
+                        pathname: "/login",
+                        }}
+                        >
+                            Login
+                        </Link>
                     </div>
                     </div>
                 </div>

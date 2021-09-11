@@ -7,7 +7,7 @@ import Homepage from '../components/homepage';
 import Main from '../components/main';
 import Footer from '../components/footer';
 
-export default function Home({ cars, brand}) {
+export default function Home({cars, brand}) {
 
   const [loading, setLoading] = useState(true)
 

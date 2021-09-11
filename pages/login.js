@@ -4,7 +4,7 @@ import Loader from "../components/utils/loader";
 import { ENDPOINT } from "../utils";
 import Login from '../components/login'
 
-export default function Home({ cars, brand }) {
+export default function Home({ }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {

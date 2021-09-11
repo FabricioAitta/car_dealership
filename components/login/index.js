@@ -1,18 +1,39 @@
+import React, { useState } from 'react';
+import { useRouter } from 'next/router'
 
 export default function Login() {
+  const router = useRouter()
+
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    lastName: "",
+    password: ""
+  })
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setUser({...user, [e.target.name]:e.target.value})
+  }
+
+  const handleSubmit = () => {
+    fetch(`${ENDPOINT}/auth`, {user})
+    .then(() => router.push("/"))
+  }
+
   return (
-    <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
+    <div class="flex items-center min-h-screen p-4 bg-gray-800 lg:justify-center">
       <div
         class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
       >
         <div
-          class="p-4 py-6 text-white bg-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
+          class="p-4 py-6 text-white bg-red-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
         >
           <div class="my-3 text-4xl font-bold tracking-wider text-center">
             <a href="#">NORT MOTORS</a>
           </div>
           <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
-          Impulsando la emoción de tener tu auto propio
+            Impulsando la emoción de tener tu auto propio
           </p>
           <p class="flex flex-col items-center justify-center mt-10 text-center">
             <span>Don't have an account?</span>
@@ -23,15 +44,35 @@ export default function Login() {
           </p>
         </div>
         <div class="p-5 bg-white md:flex-1">
-          <h3 class="my-4 text-2xl font-semibold text-gray-700 text-center">Login</h3>
-          <form action="#" class="flex flex-col space-y-5">
+          <h3 class="my-4 text-2xl font-semibold text-gray-700 text-center" onChange={(e) => handleChange(e)}>Login</h3>
+          <form action="#" class="flex flex-col space-y-5" onSubmit={() => handleSubmit()}>
             <div class="flex flex-col space-y-1">
+              <label for="name" class="text-sm font-semibold text-gray-500">Name</label>
+              <input
+                type="name"
+                id="name"
+                name="name"
+                autofocus
+                class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                onChange={(e)=>handleChange(e)}
+              />
+              <label for="lastName" class="text-sm font-semibold text-gray-500">lastname</label>
+              <input
+                type="lastName"
+                id="lastName"
+                name="lastName"
+                autofocus
+                class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                onChange={(e)=>handleChange(e)}
+              />
               <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
               <input
                 type="email"
                 id="email"
+                name="email"
                 autofocus
                 class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                onChange={(e)=>handleChange(e)}
               />
             </div>
             <div class="flex flex-col space-y-1">
@@ -42,7 +83,9 @@ export default function Login() {
               <input
                 type="password"
                 id="password"
+                name="password"
                 class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                onChange={(e)=>handleChange(e)}
               />
             </div>
             <div class="flex items-center space-x-2">
@@ -56,7 +99,7 @@ export default function Login() {
             <div>
               <button
                 type="submit"
-                class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
+                class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-red-500 rounded-md shadow hover:bg-red-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
               >
                 Log in
               </button>
