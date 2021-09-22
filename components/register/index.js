@@ -19,12 +19,17 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await fetch(`${ENDPOINT}/auth/register`, {
-      method: 'POST',
+      method: 'POST', 
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', 
+      credentials: 'same-origin', // include, *same-origin, omit
       headers: {
-        'Accept': 'application/json',
         'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: user
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(user) // body data type must match "Content-Type" header
     })
     router.push("/login")
   }
