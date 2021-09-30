@@ -1,7 +1,7 @@
 import Sidenav from './sidenav';
 
-export default function admin() {
+export default function admin({ route }) {
     return (
-        <Sidenav />
+        <Sidenav route={route}/>
     )
 }
